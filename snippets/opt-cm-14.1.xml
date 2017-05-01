@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<!--Optimized CM 14.1 Required projects-->
+  
+  <!--Forked projects-->
+  
+  <!--Build-->
+  <remove-project name="LineageOS/android_build" path="build" />
+  <project path="build" name="JDCTeam/android_build"  remote="github" revision="opt-cm-14.1" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project> 
+  
+  <!--Core-->
+  <remove-project name="LineageOS/android_system_core" path="system/core" />
+  <project path="system/core" name="JDCTeam/android_system_core" remote="github" revision="opt-cm-14.1" />
+  
+  <!--Base-->
+  <remove-project name="LineageOS/android_frameworks_base" path="frameworks/base" />
+  <project path="frameworks/base" name="JDCTeam/android_frameworks_base" remote="github" revision="opt-cm-14.1" />
+ 
+  <!--Telephony-->
+  <remove-project name="LineageOS/android_frameworks_opt_telephony" path="frameworks/opt/telephony" />
+  <remove-project name="LineageOS/android_packages_apps_CarrierConfig" path="packages/apps/CarrierConfig" />
+  <project path="frameworks/opt/telephony" name="JDCTeam/android_frameworks_opt_telephony" remote="github" revision="opt-cm-14.1" />
+  <project path="packages/apps/CarrierConfig" name="JDCTeam/android_packages_apps_CarrierConfig" remote="github" revision="opt-cm-14.1" />
+ 
+  <!--Packages-->
+  <remove-project name="LineageOS/android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" path="packages/apps/Settings" />
+  <remove-project name="LineageOS/android_packages_services_Telephony" path="packages/services/Telephony" />
+  <remove-project name="LineageOS/android_packages_apps_CMParts" path="packages/apps/CMParts"/>
+  <remove-project name="LineageOS/android_packages_apps_PackageInstaller" path="packages/apps/PackageInstaller"/>
+  <project path="packages/apps/SetupWizard" name="JDCTeam/android_packages_apps_SetupWizard" remote="github" revision="opt-cm-14.1" />
+  <project path="packages/apps/Settings" name="JDCTeam/android_packages_apps_Settings" remote="github" revision="opt-cm-14.1" />
+  <project path="packages/services/Telephony" name="JDCTeam/android_packages_services_Telephony" remote="github" revision="opt-cm-14.1" />
+  <project path="packages/apps/CMParts" name="JDCTeam/android_packages_apps_CMParts" remote="github" revision="opt-cm-14.1" />
+  <project path="packages/apps/PackageInstaller" name="JDCTeam/android_packages_apps_PackageInstaller" remote="github" revision="opt-cm-14.1" />
+  
+  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="cm-14.1" />
+  
+  <!--stlport-->
+  <project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" revision="cm-14.1"/>
+  
+  <!--JDCSettings app-->
+  <project path="packages/apps/JDCSettings" name="JDCTeam/android_packages_apps_JDCSettings" remote="github" revision="opt-cm-14.1" />
+  
+  <!--Aroma-->
+  <project path="aroma" name="dkati/Optimized-AromaInstaller" remote="github" revision="opt-cm-14.1" />
+  
+  <!--Flashables-->
+  <project path="flashables" name="dkati/OptimizedCM-flashables" remote="github" revision="opt-cm-14.1" />
+  
+  <!--Hardware-->
+  <project path="hardware/samsung" name="LineageOS/android_hardware_samsung" remote="github" revision="cm-14.1" />
+  
+  <!--Device tree-->
+  <project path="device/qcom/common" name="LineageOS/android_device_qcom_common" remote="github" revision="cm-14.1" />
+  <project path="device/samsung/jf-common" name="JDCTeam/android_device_samsung_jf-common" remote="github" revision="opt-cm-14.1" />
+  <project path="device/samsung/qcom-common" name="LineageOS/android_device_samsung_qcom-common" remote="github" revision="cm-14.1" />
+  <project path="device/samsung/jflte" name="JDCTeam/android_device_samsung_jflte" remote="github" revision="opt-cm-14.1" />
+
+  <!--Stock kernel-->
+  <project path="kernel/samsung/jf" name="LineageOS/android_kernel_samsung_jf" remote="github" revision="cm-14.1" />
+  
+  <!--Alucard kernel and Ramdisk-->
+  <project path="kernel/cr-arm-eabi-4.9.4" name="Christopher83/arm-cortex_a15-linux-gnueabihf-linaro_4.9" remote="github" revision="master" />
+  <project path="kernel/samsung/alucard24" name="dkati/Alucard-Kernel-jfltexx" remote="github" revision="opt-cm-14.1" />
+  <project path="kernel/samsung/Ramdisk" name="JDCTeam/Ramdisk" remote="github" revision="opt-cm-14.1" />
+  <project path="packages/apps/STweaks" name="JDCTeam/STweaks" remote="github" revision="opt-cm-14.1" />
+  
+   <!--Toolchains-->
+    <!--Stock kernel-->
+    <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="B--B/Custom_Toolchains" groups="pdk,linux,arm" remote="github" revision="arm-eabi-4.9-Linaro-generic" />
+    <!--ROM-->
+    <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="JDCTeam/Custom_Toolchains" groups="pdk,linux,arm" remote="github" revision="arm-linux-androideabi-4.9-Linaro" />
+  
+  <!--Webview-->
+  <project path="external/chromium-webview" name="JDCTeam/platform_external_chromium-webview" remote="github" revision="opt-cm-14.1" />
+  
+  <!--Vendors-->
+  <remove-project name="LineageOS/cm_platform_sdk" path="vendor/cmsdk" />
+  <remove-project name="LineageOS/android_vendor_cm" path="vendor/cm" />
+  <project path="vendor/cmsdk" name="JDCTeam/cm_platform_sdk" remote="github" revision="opt-cm-14.1" />
+  <project path="vendor/cm" name="JDCTeam/android_vendor_cm" remote="github" revision="opt-cm-14.1" />
+  <project path="vendor/samsung" name="JDCTeam/proprietary_vendor_samsung" remote="github" revision="jf-7.1-optcm" />
+  <project path="vendor/jdc" name="JDCTeam/android_vendor_jdc" remote="github" revision="opt-cm-14.1" >
+      <copyfile src="build.sh" dest="build.sh" />
+  </project>
+  
+
+  <!--OMS implementation-->
+  
+  <!--Frameworks base is also needed-->
+  <!--Policy-->
+  <remove-project name="LineageOS/android_system_sepolicy" path="system/sepolicy" />
+  <project path="system/sepolicy" name="JDCTeam/android_system_sepolicy" remote="github" revision="opt-cm-14.1" />
+  
+  <!--Frameworks Native-->
+  <remove-project name="LineageOS/android_frameworks_native" path="frameworks/native" />
+  <project path="frameworks/native" name="JDCTeam/android_frameworks_native" remote="github" revision="opt-cm-14.1" />
+  
+  <remove-project name="LineageOS/android_packages_apps_ExactCalculator" path="packages/apps/ExactCalculator" />
+  <project path="packages/apps/ExactCalculator" name="JDCTeam/android_packages_apps_ExactCalculator" remote="github" revision="opt-cm-14.1" />
+  
+  <remove-project name="LineageOS/android_packages_apps_PhoneCommon" path="packages/apps/PhoneCommon" />
+  <project path="packages/apps/PhoneCommon" name="JDCTeam/android_packages_apps_PhoneCommon" remote="github" revision="opt-cm-14.1" />
+  
+  <remove-project name="LineageOS/android_packages_apps_Contacts" path="packages/apps/Contacts" />
+  <project path="packages/apps/Contacts" name="JDCTeam/android_packages_apps_Contacts" remote="github" revision="opt-cm-14.1" />
+  
+  <remove-project name="LineageOS/android_packages_apps_ContactsCommon" path="packages/apps/ContactsCommon" />
+  <project path="packages/apps/ContactsCommon" name="JDCTeam/android_packages_apps_ContactsCommon" remote="github" revision="opt-cm-14.1" />
+  
+  <remove-project name="LineageOS/android_packages_apps_Dialer" path="packages/apps/Dialer" />
+  <project path="packages/apps/Dialer" name="JDCTeam/android_packages_apps_Dialer" remote="github" revision="opt-cm-14.1" />
+  
+  <project path="packages/apps/ThemeInterfacer" name="substratum/interfacer" remote="github" revision="n-rootless" />
+  
+  <!--End of OMS implementation-->
+  
+  
+  <!--Needed for complete build dir -->
+  <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" remote="aosp" />
+  <project path="build/kati" name="LineageOS/android_build_kati" groups="pdk,tradefed" />
+  <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" remote="aosp" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+</manifest>
