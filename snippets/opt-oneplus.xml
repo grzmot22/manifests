@@ -11,7 +11,7 @@
         
   <!--Base-->
       <remove-project name="LineageOS/android_frameworks_base" path="frameworks/base" />
-       <project path="frameworks/base" name="Matssa56/android_frameworks_base" remote="github" revision="opt-cm-14.1" />
+       <project path="frameworks/base" name="Matssa56/android_frameworks_base" remote="github" revision="cm-14.1-extrastuff" />
 
   <!--Packages--> 
       <remove-project name="LineageOS/android_packages_apps_Gallery2" />
