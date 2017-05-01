@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<!--Optimized CM 14.1 Required projects-->
+  
+  <!--Forked projects-->
+  
+  <!--SultanXDA stuff-->
+      <!--Patcher (run "./patcher/patcher.sh" before each compilation)-->
+      <project path="patcher" name="sultanxda/patcher" revision="cm-14.1-oneplus3" />
+        
+  <!--Base-->
+      <remove-project name="LineageOS/android_frameworks_base" path="frameworks/base" />
+       <project path="frameworks/base" name="Matssa56/android_frameworks_base" remote="github" revision="opt-cm-14.1" />
+
+  <!--Packages--> 
+      <remove-project name="LineageOS/android_packages_apps_CMUpdater" />
+      <remove-project name="LineageOS/android_packages_apps_Gallery2" />
+      <remove-project name="LineageOS/android_packages_apps_Snap" /> 
+        <project path="packages/apps/CMUpdater" name="sultanxda/android_packages_apps_CMUpdater" revision="cm-14.1-sultan" />
+	    <project path="packages/apps/Snap" name="sultanxda/android_packages_apps_Snap" revision="oneplus3/cm-14.1-sultan" />
+	    <project name="LineageOS/android_packages_apps_Gallery2" path="packages/apps/Gallery2" revision="cm-13.0" />
+	    <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" />
+	    <!--Custom Matssa56 Stuff-->
+	      <project name="Matssa56/CMUpdater-API" path="Matssa56/CMUpdater-API" remote="github" revision="cm-14.1" />
+	    <!--Camera Port Stuff-->
+	      <project name="Matssa56/android_packages_apps_OnePlusCamera" path="packages/apps/OnePlusCamera" remote="github" revision="cm-14.1" />
+	      <project name="Matssa56/android_packages_apps_OnePlusGallery" path="packages/apps/OnePlusGallery" remote="github" revision="cm-14.1" />
+	    <!--OMS stuff-->
+          <project path="packages/apps/ThemeInterfacer" name="substratum/interfacer" remote="github" revision="n-rootless" />
+
+  <!--Hardware-->
+      <remove-project name="LineageOS/android_hardware_qcom_audio" />
+      <remove-project name="LineageOS/android_hardware_qcom_display" />
+      <remove-project name="LineageOS/android_hardware_qcom_media" />
+        <project path="hardware/qcom/audio-caf/msm8996" name="sultanxda/android_hardware_qcom_audio" revision="cm-14.1-caf-8996" />
+	    <project path="hardware/qcom/display-caf/msm8996" name="sultanxda/android_hardware_qcom_display" revision="cm-14.1-caf-8996" />
+	    <project path="hardware/qcom/media-caf/msm8996" name="sultanxda/android_hardware_qcom_media" revision="cm-14.1-caf-8996" />
+
+  <!--Device tree-->
+      <project name="LineageOS/android_device_oppo_common" path="device/oppo/common" />
+      <project name="LineageOS/android_device_qcom_common" path="device/qcom/common" />
+      <!--<project name="grzmot22/android_device_oneplus_oneplus3-1" path="device/oneplus/oneplus3" remote="github" revision="cm-14.1" />-->
+      <!--Custom Matssa56 Stuff-->
+        <project path="device/oneplus/oneplus3" name="Matssa56/android_device_oneplus_oneplus3" revision="cm-14.1-matssa56" />
+
+  <!--Stock kernel-->
+      <!--<project name="LineageOS/android_kernel_oneplus_msm8996" path="kernel/oneplus/msm8996" remote="github" />-->
+      <project path="kernel/oneplus/msm8996" name="Matssa56/android_kernel_oneplus_msm8996" revision="cm-14.1-matssa56" />
+      <!--Alucard kernel and Ramdisk-->
+          <project name="B--B/Alucard-Kernel-jfltexx" path="kernel/samsung/alucard24-b" remote="github" revision="aosp-7.1" />
+          <project name="grzmot22/Ramdisk" path="kernel/samsung/RamdiskG22" remote="github" revision="opt-cm-14.1" />
+          <project name="grzmot22/Ramdisk" path="kernel/samsung/Ramdisk-clean" remote="github" revision="opt-cm-14.1-clean" />
+      <!--Dorimanx kernel-->
+          <project name="dorimanx/DORIMANX-OP3T-KERNEL" path="kernel/oneplus/dori-n-stock" remote="github" revision="STOCK_N_SOURCE_PARTS" />
+          <project name="dorimanx/DORIMANX-OP3T-KERNEL" path="kernel/oneplus/dori-staging" remote="github" revision="staging" />
+      <!--Franciscofranco kernel-->
+          <project name="franciscofranco/one_plus_3T" path="kernel/oneplus/franco" remote="github" revision="nougat" />
+      <!--Radioactive kernel-->
+          <project name="acuicultor/lazyflasher" path="kernel/oneplus/lazyflasher" remote="github" revision="radioactive" />
+          <project name="grzmot22/Radioactive_Kernel_LOS_OP3_3T" path="kernel/oneplus/radioActive" remote="github" revision="rebase2" />
+      <!--RenderBroken kernel-->
+          <project name="RenderBroken/OP3-LOS-kernel" path="kernel/oneplus/RenderBroken" remote="github" revision="eas-1.2-testing-r1-stune" />
+  
+  <!--Toolchains-->
+      <!--Stock kernel-->
+      <!--ROM-->
+          <remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" />
+            <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="AOSP-JF-MM/platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,linux,arm" remote="github" revision="aosp-7.1.1" />
+          <!--<project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="aosp" revision="master" />-->
+
+  <!--Vendors-->
+      <project name="LineageOS/android_vendor_nxp-nfc_opensource_frameworks" path="vendor/nxp-nfc/opensource/frameworks" />
+      <project name="LineageOS/android_vendor_nxp-nfc_opensource_libnfc-nci" path="vendor/nxp-nfc/opensource/libnfc-nci" />
+      <project name="LineageOS/android_vendor_nxp-nfc_opensource_Nfc" path="vendor/nxp-nfc/opensource/Nfc" />
+      <!--<project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" />-->
+      <project path="vendor/oneplus" name="sultanxda/proprietary_vendor_oneplus" revision="cm-14.1-sultan" />
+  
+ 
+
+
+</manifest>

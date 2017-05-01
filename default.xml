@@ -453,6 +453,7 @@
   
   <include name="snippets/cm-14.1.xml" />
   <!--Optimized CM14.0 Projects-->
-  <include name="snippets/opt-cm-14.1.xml" />
+  <!--<include name="snippets/opt-cm-14.1.xml" />-->
+  <include name="snippets/opt-oneplus.xml" />
   
 </manifest>
