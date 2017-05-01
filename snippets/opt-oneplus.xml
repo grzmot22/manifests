@@ -14,7 +14,6 @@
        <project path="frameworks/base" name="Matssa56/android_frameworks_base" remote="github" revision="opt-cm-14.1" />
 
   <!--Packages--> 
-      <remove-project name="LineageOS/android_packages_apps_CMUpdater" />
       <remove-project name="LineageOS/android_packages_apps_Gallery2" />
       <remove-project name="LineageOS/android_packages_apps_Snap" /> 
         <project path="packages/apps/CMUpdater" name="sultanxda/android_packages_apps_CMUpdater" revision="cm-14.1-sultan" />
@@ -65,7 +64,6 @@
   <!--Toolchains-->
       <!--Stock kernel-->
       <!--ROM-->
-          <remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" />
             <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="AOSP-JF-MM/platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,linux,arm" remote="github" revision="aosp-7.1.1" />
           <!--<project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="aosp" revision="master" />-->
 
