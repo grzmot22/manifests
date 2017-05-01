@@ -59,7 +59,7 @@
           <project name="acuicultor/lazyflasher" path="kernel/oneplus/lazyflasher" remote="github" revision="radioactive" />
           <project name="grzmot22/Radioactive_Kernel_LOS_OP3_3T" path="kernel/oneplus/radioActive" remote="github" revision="rebase2" />
       <!--RenderBroken kernel-->
-          <project name="RenderBroken/OP3-LOS-kernel" path="kernel/oneplus/RenderBroken" remote="github" revision="eas-1.2-testing-r1-stune" />
+          <project name="RenderBroken/OP3-LOS-kernel" path="kernel/oneplus/RenderBroken" remote="github" revision="rk-los-n-eas-master" />
   
   <!--Toolchains-->
       <!--Stock kernel-->
